@@ -1,4 +1,4 @@
-# Verifies if credit card number is (syntactically) valid
+# Verifies if provided credit card number is (syntactically) valid according to Luhn’s algorithm
 
 print("Number: ", end="")
 n = int(input())
