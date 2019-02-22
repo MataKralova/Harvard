@@ -1,0 +1,19 @@
+{# Done by Mata #}
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <p>
+        The value of a share of company
+    </p>
+    <p>
+        {{ name }} ("{{ symbol }}")
+    </p>
+    <p>
+        is {{ price }}
+    </p>
+{% endblock %}

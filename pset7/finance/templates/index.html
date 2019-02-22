@@ -1,0 +1,51 @@
+{# Done by Mata #}
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <p>
+        This is {{ user }}'s portfolio.
+    </p>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Stock</th>
+                <th scope="col">Company Name</th>
+                <th scope="col">Number of Shares</th>
+                <th scope="col">Current Price per Share</th>
+                <th scope="col">Total Value</th>
+                <th scope="col">Profitability</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in range(items) %}
+            <tr>
+                <td>{{ symbols[row] }}</td>
+                <td>{{ companies[row] }}</td>
+                <td>{{ numbers[row] }}</td>
+                <td align="right">{{ usd(prices[row]) }}</td>
+                <td align="right">{{ usd(totals[row]) }}</td>
+                <td align="right">{{ usd(profits[row]) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <table class="table table-striped">
+        <tr>
+            <td>Current available cash</td>
+            <td align="right">{{ usd(cash) }}</td>
+        </tr>
+    </table>
+    <table class="table table-striped">
+        <tr>
+            <td>YOUR GRAND TOTAL WEALTH</td>
+            <td align="right">{{ usd(wealth) }}</td>
+        </tr>
+
+    </table>
+{% endblock %}

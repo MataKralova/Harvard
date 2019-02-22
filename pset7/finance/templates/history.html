@@ -1,0 +1,47 @@
+{# Done by Mata #}
+
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <p>
+        This is {{ user }}'s history of transactions.
+    </p>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Stock</th>
+                <th scope="col">Company Name</th>
+                <th scope="col">Shares Bought</th>
+                <th scope="col">Shares Sold</th>
+                <th scope="col">Then Price per Share</th>
+                <th scope="col">Total Value</th>
+                <th scope="col">Profit/Loss</th>
+                <th scope="col">When</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in range(items) %}
+            <tr>
+                <td>{{ symbols[row] }}</td>
+                <td>{{ companies[row] }}</td>
+                <td>{{ num_buy[row] }}</td>
+                <td>{{ num_sell[row] }}</td>
+                <td align="right">{{ usd(prices[row]) }}</td>
+                <td align="right">{{ usd(totals[row]) }}</td>
+                {%- if profits[row] == 0 -%}<td align="right">{{ "" }}</td>{% endif %}
+                {%- if profits[row] != 0 -%}<td align="right">{{ usd(profits[row]) }}</td>{% endif %}
+                <td>{{ datetimes[row] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <table class="table table-striped">
+        <td>{{ "Total profit/loss on transactions" }}</td>
+        <td align="right">{{ usd(balance) }}</td>
+    </table>
+{% endblock %}
