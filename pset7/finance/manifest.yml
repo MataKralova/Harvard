@@ -1,5 +1,7 @@
 ---
 applications:
  - name: NY-Stock-Trading
-   random-route: true
-memory: 128M
+   command: flask run
+   path: .
+   memory: 256M
+   instances: 1
