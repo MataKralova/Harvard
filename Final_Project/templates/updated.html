@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <p>
+        <h4>The following data have been {{ wording }} the database:</h4>
+    </p>
+    <br>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Sector</th>
+                <th scope="col">New Sector</th>
+                <th scope="col">Sector Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Title</th>
+                <th scope="col">Edition</th>
+                <th scope="col">First Published</th>
+                <th scope="col">Our Issue Published</th>
+                <th scope="col">Language</th>
+                <th scope="col">Country</th>
+                <th scope="col">Fiction / Fact</th>
+                <th scope="col">Art / Other</th>
+                <th scope="col">Form</th>
+                <th scope="col">Content</th>
+                <th scope="col">Comment</th>
+            </tr>
+        </thead>
+        <tbody id="lightgreen">
+            <tr>
+                <td>{{ ins_sector }}</td>
+                <td>{{ ins_new_sector }}</td>
+                <td>{{ ins_sector_name }}</td>
+                <td>{{ ins_author }}</td>
+                <td>{{ ins_title }}</td>
+                <td>{{ ins_edition }}</td>
+                <td>{{ ins_firstY }}</td>
+                <td>{{ ins_ourY }}</td>
+                <td>{{ ins_language }}</td>
+                <td>{{ ins_country }}</td>
+                <td>{{ ins_fict_fact }}</td>
+                <td>{{ ins_art_other }}</td>
+                <td>{{ ins_form }}</td>
+                <td>{{ ins_content }}</td>
+                <td>{{ ins_comment }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <form action="/admin" method="post">
+        <div class="col-sm-12">
+            <input class="btn btn-primary" name="ok" value="OK" type="submit" ></input>
+        </div>
+    </form>
+    <p>
+        <!-- {{ name }} ("{{ symbol }}") -->
+    </p>
+    <p>
+        <!-- is {{ price }} -->
+    </p>
+{% endblock %}

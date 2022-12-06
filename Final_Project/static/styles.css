@@ -1,0 +1,161 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    /* font-size: xx-large; */
+    font: 50px/0.7 'Great Vibes', Helvetica, sans-serif;
+    color: #d66776;
+    text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+}
+
+/* colors for brand */
+nav .navbar-brand .dark-pink
+{
+    color: #d66776;
+    margin-top: 12px;
+    display: inline-block;
+}
+nav .navbar-brand .light-pink
+{
+    color: #f7edef;
+}
+
+/*nav .navbar-brand ul
+{
+    margin-top: 50px;
+} */
+
+/*.nav-item
+{
+    margin-top: 0px;
+    padding-bottom: -1rem;
+} */
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+    /*border-color: #d66776;*/
+    /*color: black;*/
+    /*font-weight: bold;*/
+
+
+    /* override Bootstrap's 100% width for form controls */
+    /* width: auto; */
+}
+
+.form-control:focus
+{
+    border-color: #f5a6b1;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+
+}
+
+/*main .form-control [value="Select..."]
+{
+    /* center form controls */
+    /*display: inline-block; */
+    /*color: #d66776; */
+
+
+    /* override Bootstrap's 100% width for form controls */
+    /* width: auto; */
+/*}*/
+
+#centered-input
+{
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+.container.p-5
+{
+    /* set margins to make biggest possible table */
+    max-width: 1950px;
+    padding-top: 1rem !important;
+    /* margin-right: 20px;
+    margin-left: 20px; */
+}
+
+/* this is not working as expected!! */
+table
+{
+    table-layout: auto;
+    width: 300px;
+}
+
+#coral
+{
+    background-color: #ffcccc;
+}
+
+#lightgreen
+{
+    background-color: #e4f5da; /* #ccffcc */
+}
+
+#italic
+{
+    font-style: italic;
+    /* font-size: 150%;
+    font-weight: bold; */
+}
+
+#pink
+{
+    /* color: whitesmoke; */
+    color: #d66776;
+    font-weight: bold;
+}
+
+#grey
+{
+    color: grey;
+}
+
+.btn-primary
+{
+    background-color: #d66776;
+    border: none;
+}
+
+.btn-primary:hover
+{
+    background-color: #a11d2f;
+    color: white;
+}
+
+#white
+{
+    background-color: white;
+}
+
+::placeholder
+{
+    color: black;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-hover > thead > tr:nth-child(2n+1) > th
+{
+    background-color: #fcb8c2;
+    font-weight: bold;
+}
+
+h4
+{
+    color: #d66776;
+}

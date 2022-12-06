@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Location
+{% endblock %}
+
+{% block main %}
+    <h4>
+        This is the list of existing sectors and their locations
+        <!-- This is {{ user }}'s portfolio. -->
+    </h4>
+    <p> </p>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Code</th>
+                <th scope="col">Rack</th>
+                <th scope="col">Shelf</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in range(items) %}
+            <tr>
+                <td>{{ codes[row] }}</td>
+                <td>{{ racks[row] }}</td>
+                <td>{{ shelves[row] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <table class="table table-striped">
+        <tr>
+            <td>Found {{ items }} results</td>
+        </tr>
+    </table>
+{% endblock %}

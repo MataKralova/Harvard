@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <p>
+        <h4>Are you sure you want to {{ wording }} the database {{ wording2 }} the following data?</h4>
+    </p>
+    <br>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Sector</th>
+                <th scope="col">New Sector</th>
+                <th scope="col">Sector Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Title</th>
+                <th scope="col">Edition</th>
+                <th scope="col">First Published</th>
+                <th scope="col">Our Issue Published</th>
+                <th scope="col">Language</th>
+                <th scope="col">Country</th>
+                <th scope="col">Fiction / Fact</th>
+                <th scope="col">Art / Other</th>
+                <th scope="col">Form</th>
+                <th scope="col">Content</th>
+                <th scope="col">Comment</th>
+            </tr>
+        </thead>
+        <tbody id="coral">
+            <tr>
+                <td>{{ ins_sector }}</td>
+                <td>{{ ins_new_sector }}</td>
+                <td>{{ ins_sector_name }}</td>
+                <td>{{ ins_author }}</td>
+                <td>{{ ins_title }}</td>
+                <td>{{ ins_edition }}</td>
+                <td>{{ ins_firstY }}</td>
+                <td>{{ ins_ourY }}</td>
+                <td>{{ ins_language }}</td>
+                <td>{{ ins_country }}</td>
+                <td>{{ ins_fict_fact }}</td>
+                <td>{{ ins_art_other }}</td>
+                <td>{{ ins_form }}</td>
+                <td>{{ ins_content }}</td>
+                <td>{{ ins_comment }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <form action="/admin" method="post">
+        <div class="col-sm-12">
+            <input class="btn btn-primary" name="{{ action }}" value="Confirm and {{ action[0]|upper }}{{ action[1:-2] }}" type="submit" ></input> {# used for both insert and edit #}
+            <input class="btn btn-primary" name="cancel" value="Cancel" type="submit" ></input>
+        </div>
+    </form>
+    <p>
+        <!-- is {{ price }} -->
+    </p>
+    </class>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <p> </p>
+    <br>
+    <form action="/register" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" id="centered-input" name="username" placeholder="Username" type="text"/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" id="centered-input" name="password" placeholder="Password" type="password"/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" id="centered-input" name="confirmation" placeholder="Confirm password" type="password"/>
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+
+    <script>
+        function ajax_request(argument)
+    {
+        var aj = new XMLHttpRequest();
+        aj.onreadystatechange = function() {
+            (aj.readyState == 4 && aj.status == 200)
+            // do something to the page
+        };
+
+        aj.open("GET", "http://ide50-matakralova.legacy.cs50.io:8080/", true);
+        aj.send();
+    }
+    </script>
+{% endblock %}

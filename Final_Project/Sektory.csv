@@ -1,0 +1,66 @@
+Kod,Skrina,Policka
+A1,Oproti kupelni,Horna policka
+A2,Oproti kupelni,Druha policka zhora
+A3,Oproti kupelni,Tretia policka zhora
+A4,Oproti kupelni,Štvrtá policka zhora
+A5,Oproti kupelni,Posledná policka
+B1,Oproti zachodu,Horna policka
+B2,Oproti zachodu,Druha policka zhora
+B3,Oproti zachodu,Tretia policka zhora
+B4,Oproti zachodu,Posledná policka
+C,Chodba - prvá (úzka) polička od vchodových dverí,bez určenia
+D0,Chodba - druhá (s dverami) polička od vchodových dverí,Horný nadstavec
+D1,Chodba - druhá (s dverami) polička od vchodových dverí,Horná polička
+D2,Chodba - druhá (s dverami) polička od vchodových dverí,Druhá polička zhora
+D3,Chodba - druhá (s dverami) polička od vchodových dverí,Tretia policka zhora
+D4,Chodba - druhá (s dverami) polička od vchodových dverí,Štvrtá policka zhora
+D5,Chodba - druhá (s dverami) polička od vchodových dverí,Piata polička zhora
+D6,Chodba - druhá (s dverami) polička od vchodových dverí,Posledná policka
+E,Chodba - tretia (úzka) polička od vchodových dverí,bez určenia
+F0,Chodba - štvrtá (s dverami) polička od vchodových dverí,Horný nadstavec
+F1,Chodba - štvrtá (s dverami) polička od vchodových dverí,Horná polička
+F2,Chodba - štvrtá (s dverami) polička od vchodových dverí,Druhá polička zhora
+F3,Chodba - štvrtá (s dverami) polička od vchodových dverí,Tretia policka zhora
+F4,Chodba - štvrtá (s dverami) polička od vchodových dverí,Štvrtá policka zhora
+F5,Chodba - štvrtá (s dverami) polička od vchodových dverí,Piata polička zhora
+F6,Chodba - štvrtá (s dverami) polička od vchodových dverí,Šiesta polička zhora
+F7,Chodba - štvrtá (s dverami) polička od vchodových dverí,Siedma polička zhora
+F8,Chodba - štvrtá (s dverami) polička od vchodových dverí,Posledná polička
+G0,Chodba - piata (úzka) polička od vchodových dverí,Horný nadstavec
+G,Chodba - piata (úzka) polička od vchodových dverí,bez určenia
+H1,Klavírová izba - polička naľavo od klavíra,Horná polička
+H2,Klavírová izba - polička naľavo od klavíra,Druhá polička zhora
+H3,Klavírová izba - polička naľavo od klavíra,Tretia policka zhora
+H4,Klavírová izba - polička naľavo od klavíra,Štvrtá policka zhora
+H5,Klavírová izba - polička naľavo od klavíra,Piata polička zhora
+H6,Klavírová izba - polička naľavo od klavíra,Šiesta polička zhora
+H7,Klavírová izba - polička naľavo od klavíra,Siedma polička zhora
+H8,Klavírová izba - polička naľavo od klavíra,Posledná polička
+K2,Klavírová izba - polička napravo od klavíra,Druhá polička zhora
+K3,Klavírová izba - polička napravo od klavíra,Tretia policka zhora
+K4,Klavírová izba - polička napravo od klavíra,Štvrtá policka zhora
+K5,Klavírová izba - polička napravo od klavíra,Piata polička zhora
+K6,Klavírová izba - polička napravo od klavíra,Šiesta polička zhora
+K7,Klavírová izba - polička napravo od klavíra,Siedma polička zhora
+Detská,Detská izba na zemi,na zemi
+L,Klavírová izba - polička medzi vchodom a terasou - druhý rad,tretia zhora
+Krabica,Krabica niekde v prvej alebo klavírovej izbe,
+Spálňa,Spálňa - poličky pri posteli,
+M1,Detská izba - prvá polička od vchodu (stredne široká),Prvá polička zhora
+M2,Detská izba - prvá polička od vchodu (stredne široká),Druhá polička zhora
+M3,Detská izba - prvá polička od vchodu (stredne široká),Tretia policka zhora
+M4,Detská izba - prvá polička od vchodu (stredne široká),Štvrtá policka zhora
+N1,Detská izba - druhá polička od vchodu (široká),Prvá polička zhora
+N2,Detská izba - druhá polička od vchodu (široká),Druhá polička zhora
+N3,Detská izba - druhá polička od vchodu (široká),Tretia policka zhora
+N4,Detská izba - druhá polička od vchodu (široká),Štvrtá policka zhora
+N5,Detská izba - druhá polička od vchodu (široká),Piata polička zhora
+N6,Detská izba - druhá polička od vchodu (široká),Šiesta polička zhora
+N7,Detská izba - druhá polička od vchodu (široká),Siedma polička zhora
+N8,Detská izba - druhá polička od vchodu (široká),Posledná policka
+O1,Detská izba - tretia polička od vchodu (stredne široká),Prvá polička zhora
+O2,Detská izba - tretia polička od vchodu (stredne široká),Druhá polička zhora
+O3,Detská izba - tretia polička od vchodu (stredne široká),Tretia policka zhora
+O4,Detská izba - tretia polička od vchodu (stredne široká),Štvrtá policka zhora
+O5,Detská izba - tretia polička od vchodu (stredne široká),Piata polička zhora
+P,Detská izba - štvrtá polička od vchodu (úzka),

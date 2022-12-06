@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <p>
+        This is the main database
+        <!-- This is {{ user }}'s portfolio. -->
+    </p>
+
+    <form action="/sell" method="post">
+        <div class="form-group">
+            <select class="form-control" name="symbol" placeholder="Stock">
+                {% for row in range(items) %}
+                    <option>{{ symbols[row] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" name="shares" placeholder="Number" type="text"/>
+        </div>
+        <div>
+            <button class="btn btn-primary" type="submit">Sell</button>
+        </div>
+    </form>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+    </script>
+
+    <input id="myInput" type="text" placeholder="Search..">
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Sector</th>
+                <th scope="col">New Sector</th>
+                <th scope="col">Sector Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Title</th>
+                <th scope="col">Edition</th>
+                <th scope="col">First Published</th>
+                <th scope="col">Our Issue Published</th>
+                <th scope="col">Language</th>
+                <th scope="col">Country</th>
+                <th scope="col">Fiction / Fact</th>
+                <th scope="col">Art / Other</th>
+                <th scope="col">Form</th>
+                <th scope="col">Content</th>
+                <th scope="col">Comment</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <!-- this is to be replaced with Books' code -->
+            {% for row in range(items) %}
+            <tr>
+                <td>{{ sectors[row] }}</td>
+                <td>{{ new_sectors[row] }}</td>
+                <td>{{ sector_names[row] }}</td>
+                <td>{{ authors[row] }}</td>
+                <td>{{ titles[row] }}</td>
+                <td>{{ editions[row] }}</td>
+                <td>{{ firstYs[row] }}</td>
+                <td>{{ ourYs[row] }}</td>
+                <td>{{ languages[row] }}</td>
+                <td>{{ countries[row] }}</td>
+                <td>{{ fict_facts[row] }}</td>
+                <td>{{ art_others[row] }}</td>
+                <td>{{ forms[row] }}</td>
+                <td>{{ contents[row] }}</td>
+                <td>{{ comments[row] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <table class="table table-striped">
+        <tr>
+            <td>Current available cash</td>
+
+        </tr>
+    </table>
+    <table class="table table-striped">
+        <tr>
+            <td>YOUR GRAND TOTAL WEALTH</td>
+
+        </tr>
+
+    </table>
+{% endblock %}

@@ -1,0 +1,326 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+        <h4>{{ wording }} book's data in the fields below:</h4>
+        <!-- This is {{ user }}'s portfolio. -->
+
+    <form action="/admin" method="post">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-2">
+                    <label id="italic">Sector</label>
+                    <select class="form-control" name="ins_sector">
+                        {% for line in range(ins_nb_sectors) %}
+                        <option>{{ ins_all_sectors[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">New Sector</label>
+                    <select class="form-control" name="ins_new_sector">
+                        {% for line in range(ins_nb_new_sectors) %}
+                        <option>{{ ins_all_new_sectors[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Sector Name</label>
+                    <select class="form-control" name="ins_sector_name">
+                        {% for line in range(ins_nb_sector_names) %}
+                        <option>{{ ins_all_sector_names[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Author</label>
+                    <input autocomplete="off" class="form-control" name="ins_author" type="text" value="{{ ins_author }}"/>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Title</label>
+                    <input autocomplete="off" class="form-control" name="ins_title" type="text" value="{{ ins_title }}"/>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-2">
+                    <label id="italic">Edition</label>
+                    <select class="form-control" name="ins_edition">
+                        {% for line in range(ins_nb_editions) %}
+                        <option>{{ ins_all_editions[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">First Published</label>
+                    <input autocomplete="off" class="form-control" name="ins_firstY" type="text" value="{{ ins_firstY }}"/>
+                </div>
+                <div class="col-sm-2">
+                    <label>Our Issue Published</label>
+                    <input autocomplete="off" class="form-control" name="ins_ourY" type="text" value="{{ ins_ourY }}"/>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Language</label>
+                    <select class="form-control" name="ins_language">
+                        {% for line in range(ins_nb_languages) %}
+                        <option>{{ ins_all_languages[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Country</label>
+                    <select class="form-control" name="ins_country">
+                        {% for line in range(ins_nb_countries) %}
+                        <option>{{ ins_all_countries[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-2">
+                    <label id="italic">Fiction or Fact</label>
+                    <select class="form-control" name="ins_fict_fact">
+                        {% for line in range(ins_nb_fict_facts) %}
+                        <option>{{ ins_all_fict_facts[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Art or Other</label>
+                    <select class="form-control" name="ins_art_other">
+                        {% for line in range(ins_nb_art_others) %}
+                        <option>{{ ins_all_art_others[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Form</label>
+                    <select class="form-control" name="ins_form">
+                        {% for line in range(ins_nb_forms) %}
+                        <option>{{ ins_all_forms[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Content</label>
+                    <select class="form-control" name="ins_content">
+                        {% for line in range(ins_nb_contents) %}
+                        <option>{{ ins_all_contents[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Comment</label>
+                    <input autocomplete="off" class="form-control" name="ins_comment" type="text" value="{{ ins_comment }}"/>
+                </div>
+                <div class="col-sm-2">
+                    <input class="btn btn-primary" name="{{ action }}" value="{{ action[0]|upper }}{{ action[1:-7] }}" type="submit" ></input>
+                </div>
+            </div>
+        </div>
+    </form>
+
+        <p>
+            <h4>Filter data from the database below:</h4>
+            <!-- This is {{ user }}'s portfolio. -->
+        </p>
+
+    <form action="/admin" method="post">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-2">
+                    <label id="italic">Sector</label>
+                    <select class="form-control" name="sector">
+                        {% for line in range(nb_sectors) %}
+                        <option>{{ all_sectors[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">New Sector</label>
+                    <select class="form-control" name="new_sector">
+                        {% for line in range(nb_new_sectors) %}
+                        <option>{{ all_new_sectors[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Sector Name</label>
+                    <select class="form-control" name="sector_name">
+                        {% for line in range(nb_sector_names) %}
+                        <option>{{ all_sector_names[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Author</label>
+                    <input autocomplete="off" class="form-control" name="author" type="text"
+                        {% if s_author != "" %}
+                        value="{{ s_author }}"
+                        {% else %}
+                        input placeholder="Select..."
+                        {% endif %}/>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Title</label>
+                    <input autocomplete="off" class="form-control" name="title" type="text"
+                        {% if s_title != "" %}
+                        value="{{ s_title }}"
+                        {% else %}
+                        input placeholder="Select..."
+                        {% endif %}/>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-2">
+                    <label id="italic">Edition</label>
+                    <select class="form-control" name="edition">
+                        {% for line in range(nb_editions) %}
+                        <option>{{ all_editions[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">First Published</label>
+                    <input autocomplete="off" class="form-control" name="firstY" type="text"
+                        {% if s_firstY != "" %}
+                        value="{{ s_firstY }}"
+                        {% else %}
+                        input placeholder="Select..."
+                        {% endif %}/>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Our Issue Published</label>
+                    <input autocomplete="off" class="form-control" name="ourY" type="text"
+                        {% if s_ourY != "" %}
+                        value="{{ s_ourY }}"
+                        {% else %}
+                        input placeholder="Select..."
+                        {% endif %}/>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Language</label>
+                    <select class="form-control" name="language">
+                        {% for line in range(nb_languages) %}
+                        <option>{{ all_languages[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Country</label>
+                    <select class="form-control" name="country">
+                        {% for line in range(nb_countries) %}
+                        <option>{{ all_countries[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-2">
+                    <label id="italic">Fiction or Fact</label>
+                    <select class="form-control" name="fict_fact">
+                        {% for line in range(nb_fict_facts) %}
+                        <option>{{ all_fict_facts[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Art or Other</label>
+                    <select class="form-control" name="art_other">
+                        {% for line in range(nb_art_others) %}
+                        <option>{{ all_art_others[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Form</label>
+                    <select class="form-control" name="form">
+                        {% for line in range(nb_forms) %}
+                        <option>{{ all_forms[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Content</label>
+                    <select class="form-control" name="content">
+                        {% for line in range(nb_contents) %}
+                        <option>{{ all_contents[line] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label id="italic">Comment</label>
+                    <input autocomplete="off" class="form-control" name="comment" type="text"
+                        {% if s_comment != "" %}
+                        value="{{ s_comment }}"
+                        {% else %}
+                        input placeholder="Select..."
+                        {% endif %}/>
+                </div>
+                <div class="col-sm-2">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+            </div>
+        </div>
+    </form>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Sector</th>
+                    <th scope="col">New Sector</th>
+                    <th scope="col">Sector Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Edition</th>
+                    <th scope="col">First Published</th>
+                    <th scope="col">Our Issue Published</th>
+                    <th scope="col">Language</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">Fiction / Fact</th>
+                    <th scope="col">Art / Other</th>
+                    <th scope="col">Form</th>
+                    <th scope="col">Content</th>
+                    <th scope="col">Comment</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in range(items) %}
+                <tr>
+                    <td>{{ sectors[row] }}</td>
+                    <td>{{ new_sectors[row] }}</td>
+                    <td>{{ sector_names[row] }}</td>
+                    <td>{{ authors[row] }}</td>
+                    <td>{{ titles[row] }}</td>
+                    <td>{{ editions[row] }}</td>
+                    <td>{{ firstYs[row] }}</td>
+                    <td>{{ ourYs[row] }}</td>
+                    <td>{{ languages[row] }}</td>
+                    <td>{{ countries[row] }}</td>
+                    <td>{{ fict_facts[row] }}</td>
+                    <td>{{ art_others[row] }}</td>
+                    <td>{{ forms[row] }}</td>
+                    <td>{{ contents[row] }}</td>
+                    <td>{{ comments[row] }}</td>
+                    <form action="/admin" method="post">
+                        <input type="hidden" name="book_id" value="{{ ids[row] }}"></input></td>
+                        <td><input class="btn btn-primary" name="edit" value="Edit" type="submit"></input>
+                        <td><input class="btn btn-primary" name="delete" value="Delete" type="submit"></input></td>
+                    </form>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    <table class="table table-striped">
+        <tr>
+            <td>Found {{ items }} results</td>
+        </tr>
+    </table>
+{% endblock %}
