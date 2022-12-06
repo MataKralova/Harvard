@@ -1,0 +1,11 @@
+Ahoj svet.
+
+Cheers!
+
+This is a test file. It's cool.
+Mata is a real programmer.
+Let's keep fingers crossed for her.
+
+This is CS50.
+
+Cheers!

@@ -1,0 +1,11 @@
+Hello World.
+
+This is CS50.
+
+Cheers!
+
+This is a test file. It's very good.
+Mata is a real programmer.
+Mata is a real hacker.
+
+But WHY does it not work fully???

@@ -1,0 +1,21 @@
+{# Done by Mata #}
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="col">
+        <form action="/compare" enctype="multipart/form-data" method="post">
+
+            <!-- TODO -->
+            Select a file: <input type="file" name="file1"><br>
+            Select a file: <input type="file" name="file2"><br>
+            <input type="radio" name="algorithm" value="lines" checked> Lines<br>
+            <input type="radio" name="algorithm" value="sentences"> Sentences<br>
+            <input type="radio" name="algorithm" value="substrings"> Substrings<br>
+            <input type="number" name="length" value="n">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+{% endblock %}
