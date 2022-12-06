@@ -1,0 +1,9 @@
+0.  Pneumonoultramicroscopicsilicovolcanoconiosis is the longest word in English
+    and so 45 letters is the maximum word length defined in our header file.
+1.  Getrusage returns the statistics of a resource usage
+    (we measured CPU time used).
+2.  Struct usage has 16 members.
+3.  TODO
+4.  TODO
+5.  TODO
+6.  TODO
