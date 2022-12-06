@@ -1,4 +1,4 @@
-# Cognitive-Finance
+# Harvard
 Mata's sample coding work from Harvard
 
 This repository contains homework assignments from Harvard's own "CS50: Introduction to Computer Science" course completed by Mata Kralova.
