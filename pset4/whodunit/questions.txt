@@ -1,0 +1,13 @@
+1.  <stdint.h> is a header file that contains the definitions of fixed-width integer types.
+2.  uint8_t, uint32_t, int32_t and uint16_t are data types also known as BYTE, DWORD, LONG and WORD respectively 
+    and they are essential construction elements of any BMP file.
+3.  BYTE is 1 byte, DWORD is 4 bytes, LONG is 4 bytes and WORD is 2 bytes long.
+4.  The first two bytes of any BMP file are called Header Field and must be 0x42 0x4D, which is equivalent to BM in ASCII.
+5.  bfSize is the size of the whole BMP file, while biSize is the size of BITMAPINFOHEADER of the given BMP file.
+6.  If biHeight is negative, the bitmap is a top-down DIB and it's origin is the upper-left corner.
+7.  Intensity of colour is specified in biBitCount field.
+8.  fopen might return NULL if the file doesn't exist, or if it's not located in the working directory, for example.
+9.  The third argument of fread is always 1, because we want to iterate over one triple at a time.
+10. The value assigned to padding in line 65 is 3.
+11. fseek seeks the current position of the cursor (file position indicator) in a BMP file.
+12. SEEK_CUR is the current position of the cursor (file position indicator) in a BMP file.
